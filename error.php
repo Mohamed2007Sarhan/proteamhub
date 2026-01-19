@@ -38,7 +38,6 @@
             animation-delay: 2s;
         }
 
-        /* Keyframes for effects */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -82,19 +81,17 @@
         <h1>Oops! Something Went Wrong.</h1>
         <p>We couldn't find the page you're looking for, but don't worry, we are here to help!</p>
         <div class="animation-wrapper">
-            <!-- JavaScript will add animated particles here -->
         </div>
     </div>
 
     <script>
-        // Particle animation effect
         const particleContainer = document.querySelector('.animation-wrapper');
         
         function createParticles() {
             for (let i = 0; i < 20; i++) {
                 let particle = document.createElement('div');
                 particle.classList.add('particle');
-                const size = Math.random() * 10 + 5;  // Random size
+                const size = Math.random() * 10 + 5;
                 const startX = Math.random() * 100 + '%';
                 const startY = Math.random() * 100 + '%';
                 particle.style.width = size + 'px';
@@ -104,7 +101,6 @@
 
                 particleContainer.appendChild(particle);
 
-                // Add delay for animation to start
                 setTimeout(() => {
                     particle.style.animationDelay = Math.random() * 2 + 's';
                 }, 100);
